@@ -1,0 +1,12 @@
+/* Extra large */
+@media only screen and (min-width: 1200px) {
+
+    /* [Coming soon main text] */
+    .text-wr {
+        margin-bottom: 24px;
+    }
+
+    .main-text {
+        font-size: 5rem;
+    }
+}

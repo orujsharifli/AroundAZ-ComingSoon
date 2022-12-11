@@ -1,0 +1,245 @@
+:root {
+    --white: #fff;
+    --cyan-aqua: #00fffc;
+    --yellow: #fffc00;
+    --electric-violetr: #fc00ff;
+    --royal-purple: #6b33a7;
+    --eminence: #572a86;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+}
+
+/* a tag */
+a {
+    text-decoration: none;
+}
+
+/* Image user select none */
+img {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Body */
+body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+}
+
+/* [Main] */
+.main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    z-index: 1;
+}
+
+/* [Coming soon main text] */
+.text-wr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.main-text {
+    font-weight: 600;
+    margin-bottom: 0;
+    color: var(--white);
+    font-size: calc(1.625rem + 4.5vw);
+}
+
+/* Glitch effect */
+.glitch {
+    position: relative;
+    text-shadow: 0.05em 0 0 var(--cyan-aqua), -0.03em -0.04em 0 var(--electric-violetr),
+        0.025em 0.04em 0 var(--yellow);
+    -webkit-animation: glitch 725ms infinite;
+    animation: glitch 725ms infinite;
+}
+
+.glitch span {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.glitch span:first-child {
+    -webkit-animation: glitch 500ms infinite;
+    animation: glitch 500ms infinite;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+    clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+    -webkit-transform: translate(-0.04em, -0.03em);
+    -ms-transform: translate(-0.04em, -0.03em);
+    transform: translate(-0.04em, -0.03em);
+    opacity: .75;
+}
+
+.glitch span:last-child {
+    -webkit-animation: glitch 375ms infinite;
+    animation: glitch 375ms infinite;
+    -webkit-clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+    clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+    -webkit-transform: translate(0.04em, 0.03em);
+    -ms-transform: translate(0.04em, 0.03em);
+    transform: translate(0.04em, 0.03em);
+    opacity: .75;
+}
+
+/* Glitch effect keyframes */
+@-webkit-keyframes glitch {
+    0% {
+        text-shadow: 0.05em 0 0 var(--cyan-aqua), -0.03em -0.04em 0 var(--electric-violetr),
+            0.025em 0.04em 0 var(--yellow);
+    }
+
+    15% {
+        text-shadow: 0.05em 0 0 var(--cyan-aqua), -0.03em -0.04em 0 var(--electric-violetr),
+            0.025em 0.04em 0 var(--yellow);
+    }
+
+    16% {
+        text-shadow: -0.05em -0.025em 0 var(--cyan-aqua), 0.025em 0.035em 0 var(--electric-violetr),
+            -0.05em -0.05em 0 var(--yellow);
+    }
+
+    49% {
+        text-shadow: -0.05em -0.025em 0 var(--cyan-aqua), 0.025em 0.035em 0 var(--electric-violetr),
+            -0.05em -0.05em 0 var(--yellow);
+    }
+
+    50% {
+        text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 var(--electric-violetr),
+            0 -0.04em 0 var(--yellow);
+    }
+
+    99% {
+        text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 var(--electric-violetr),
+            0 -0.04em 0 var(--yellow);
+    }
+
+    100% {
+        text-shadow: -0.05em 0 0 #00fffc, -0.025em -0.04em 0 var(--electric-violetr),
+            -0.04em -0.025em 0 var(--yellow);
+    }
+}
+
+@keyframes glitch {
+    0% {
+        text-shadow: 0.05em 0 0 var(--cyan-aqua), -0.03em -0.04em 0 var(--electric-violetr),
+            0.025em 0.04em 0 var(--yellow);
+    }
+
+    15% {
+        text-shadow: 0.05em 0 0 var(--cyan-aqua), -0.03em -0.04em 0 var(--electric-violetr),
+            0.025em 0.04em 0 var(--yellow);
+    }
+
+    16% {
+        text-shadow: -0.05em -0.025em 0 var(--cyan-aqua), 0.025em 0.035em 0 var(--electric-violetr),
+            -0.05em -0.05em 0 var(--yellow);
+    }
+
+    49% {
+        text-shadow: -0.05em -0.025em 0 var(--cyan-aqua), 0.025em 0.035em 0 var(--electric-violetr),
+            -0.05em -0.05em 0 var(--yellow);
+    }
+
+    50% {
+        text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 var(--electric-violetr),
+            0 -0.04em 0 var(--yellow);
+    }
+
+    99% {
+        text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 var(--electric-violetr),
+            0 -0.04em 0 var(--yellow);
+    }
+
+    100% {
+        text-shadow: -0.05em 0 0 #00fffc, -0.025em -0.04em 0 var(--electric-violetr),
+            -0.04em -0.025em 0 var(--yellow);
+    }
+}
+
+/* [Social media links] */
+.social-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.social-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: var(--eminence);
+    background: -o-linear-gradient(left, var(--eminence), var(--royal-purple));
+    background: -webkit-gradient(linear, left top, right top, from(var(--eminence)), to(var(--royal-purple)));
+    background: linear-gradient(to right, var(--eminence), var(--royal-purple));
+}
+
+.social-link:not(:last-child) {
+    margin-right: 24px;
+}
+
+.social-link:hover {
+    -webkit-box-shadow: 0px 3px 15px 0px var(--eminence);
+    box-shadow: 0px 3px 15px 0px var(--eminence);
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+
+.social-link i {
+    color: var(--white);
+    font-size: 22px;
+}
+
+/* [Bottom logo] */
+.logo {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 32px;
+}
+
+.logo img {
+    width: 180px;
+}
